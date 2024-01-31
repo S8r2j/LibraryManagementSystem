@@ -1,5 +1,5 @@
 import datetime
-from config import setting
+from core.config import setting
 from flask import jsonify
 from db import models
 from flask_jwt_extended import create_access_token,JWTManager
@@ -24,6 +24,8 @@ class Token:
         except Exception as e:
             # for handeling all unexpected errors
             return jsonify({"error":"Failed to create the access token"}),500
+
+tokens = Token()
 
 # Tells the JWT Extended what identifier to include in token
 @jwt.user_identity_loader

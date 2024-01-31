@@ -11,13 +11,16 @@ class Login(BaseModel):
 class UserDetails(User,Login):
     pass
 
+class LoginCred(Login):
+    email: EmailStr
 class Book(BaseModel):
+    bookid: str
     title : str
     isbn : str
     publisheddate : date
     genre : str
 
-class BookDetails(BaseModel):
+class BookDetails(Book):
     numberofpages : int
     publisher : str
     language : str
