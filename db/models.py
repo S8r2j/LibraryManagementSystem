@@ -7,10 +7,9 @@ from datetime import datetime
 app = Flask(__name__)   # Initialization of flask application
 # setting up the database uri for establishing connection
 app.config['SQLALCHEMY_DATABASE_URI'] = f'mysql+pymysql://{setting.DATABASE_USER}:{setting.DATABASE_PASSWORD}@{setting.DATABASE_HOST}/{setting.DATABASE_NAME}'
-app.config['SECRET_KEY'] = setting.SECRET_KEY
+
 
 db = SQLAlchemy(app)    # Initializing SQLAlchemy for flask instance to setup database
-jwt = JWTManager(app)   # For APIs to be used by other frontends as well
 
 class User(db.Model):
     userid = db.Column(db.Integer, primary_key = True, autoincrement = True)
