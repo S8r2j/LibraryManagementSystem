@@ -18,6 +18,7 @@ class User(db.Model):
     email = db.Column(db.String(100), nullable = False, unique = True)
     membershipdate = db.Column(db.DateTime, default  = datetime.utcnow(), nullable = False)
     borrowedbooks = db.relationship('BorrowedBooks', backref = 'user', lazy = True)
+    login = db.Column('Login', backref = 'userlogin', uselist = False)
 
 class Login(db.Model):
     logid = db.Column(db.Integer, primary_key =True, autoincrement=True)
