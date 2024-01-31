@@ -18,7 +18,7 @@ database = your_database_name<br>
 secret_key = create_secret_key as said below:<br>Open the command prompt and type the command<br> <i>python -c "import secrets; print(secrets.token_hex(16))"</i>
 > - Run the backend using the command:<br><b>python main.py</b>
 
-You can check the APIs [here](https://www.postman.com/red-space-314271/workspace/library-management-system/collection/23667429-92e10b90-2d3a-4179-8f2b-f64f15e41c6b?action=share&creator=23667429). If you want to run these APIs you have to do it locally. Before running these APIs here are few things that you need to take care of:
+You can check the APIs [here](https://www.postman.com/red-space-314271/workspace/library-management-system/collection/23667429-92e10b90-2d3a-4179-8f2b-f64f15e41c6b?action=share&creator=23667429) for each of their purposes. If you want to run these APIs you have to do it locally. Before running these APIs here are few things that you need to take care of:
 - First of all, one admin account is already created in the backend with which you can create the multiple admins. Login credentials are as:<br><b>Email:</b><i> admin@gmail.com</i><br><b>Password:</b><i> admin@123</i>
 - Before using these APIs you need to login with the above credentials which will in return provide you token
 - The validation time of token is 4 hours. After 4 hours, you need to regenerate the token.
