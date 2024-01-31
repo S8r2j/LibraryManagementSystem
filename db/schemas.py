@@ -36,4 +36,6 @@ class UpdateBooks(BaseModel):
     publisher: Optional[str]= None
     language: Optional[str]= None
 class BorrowedBooks(BaseModel):
-    returndate : date
+    bookid: str
+    useremail: Optional[EmailStr] = None
+    returndate : Optional[date] = None
