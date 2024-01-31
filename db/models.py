@@ -19,6 +19,11 @@ class User(db.Model):
     membershipdate = db.Column(db.DateTime, default  = datetime.utcnow(), nullable = False)
     borrowedbooks = db.relationship('BorrowedBooks', backref = 'user', lazy = True)
 
+class Login(db.Model):
+    logid = db.Column(db.Integer, primary_key =True, autoincrement=True)
+    userid = db.Column(db.Integer, db.ForeignKey('user.userid'), nullable = False, unique = True)
+    password = db.Column(db.String(255), nullable = False)
+
 class Book(db.Model):
     bookid = db.Column(db.String(50), primary_key = True)
     title = db.Column(db.String(255), nullable = False)
